@@ -1,92 +1,139 @@
-// Preloader
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-    }, 1000);
-});
+// Chờ DOM tải xong
+document.addEventListener('DOMContentLoaded', () => {
+    // TOGGLE MENU CHO MOBILE
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
+    navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        navToggle.classList.toggle('active');
+        if (mainNav.classList.contains('active')) {
+            mainNav.style.animation = 'slideIn 0.8s ease-out';
+        } else {
+            mainNav.style.animation = 'none';
         }
     });
-});
 
-// Parallax effect cho hero (nâng cao)
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    const scrollPosition = window.scrollY;
-    hero.style.transform = `translateY(${scrollPosition * 0.3}px) scale(${1 - scrollPosition * 0.0005})`;
-    hero.style.opacity = `${1 - scrollPosition * 0.001}`;
-});
+    // HIỆU ỨNG KHI CUỘN HEADER
+    const header = document.querySelector('.main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-// Animation khi cuộn vào section (nâng cao)
-const sections = document.querySelectorAll('.features, .services, .projects, .testimonials, .team, .pricing, .blog, .faq, .contact');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('services')) {
-                entry.target.style.background = 'radial-gradient(circle, rgba(194,24,91,0.1) 0%, rgba(0,196,204,0.1) 100%)'; /* Đỏ cherry */
+    // HIỆU ỨNG PARALLAX VÀ XUẤT HIỆN KHI CUỘN
+    const sections = document.querySelectorAll('.services-section, .portfolio-section, .pricing-section, .team-section, .contact-section, .footer-container');
+    const heroOverlay = document.querySelector('.hero-overlay');
+    const heroImage = document.querySelector('.hero-img');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    const teamMembers = document.querySelectorAll('.team-member');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                if (entry.target.classList.contains('hero-section')) {
+                    entry.target.querySelector('.hero-overlay').style.animation = 'parallax 10s infinite alternate';
+                }
             }
-        }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        section.style.opacity = 0;
+        section.style.transform = 'translateY(50px)';
+        observer.observe(section);
     });
-}, { threshold: 0.2 });
 
-sections.forEach(section => {
-    observer.observe(section);
-});
+    // PARALLAX CHO HERO
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        if (heroOverlay) {
+            const overlayOffset = scrollPosition * 0.1;
+            heroOverlay.style.transform = `translateY(${overlayOffset}px)`;
+        }
+        if (heroImage) {
+            const imageOffset = scrollPosition * 0.3;
+            heroImage.style.transform = `translateY(${imageOffset}px)`;
+        }
+        serviceCards.forEach(card => {
+            const cardOffset = scrollPosition * 0.1;
+            card.style.transform = `translateY(${cardOffset}px)`;
+        });
+        portfolioItems.forEach(item => {
+            const itemOffset = scrollPosition * 0.15;
+            item.style.transform = `translateY(${itemOffset}px)`;
+        });
+        pricingCards.forEach(card => {
+            const cardOffset = scrollPosition * 0.12;
+            card.style.transform = `translateY(${cardOffset}px)`;
+        });
+        teamMembers.forEach(member => {
+            const memberOffset = scrollPosition * 0.1;
+            member.style.transform = `translateY(${memberOffset}px)`;
+        });
+    });
 
-// Particle.js cho Hero (đổi màu thành đỏ cherry)
-particlesJS('particles-js', {
-    particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#c2185b' }, /* Đỏ cherry thay trắng */
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: true },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: '#c2185b', opacity: 0.4, width: 1 }, /* Đỏ cherry */
-        move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out' }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
-    },
-    retina_detect: true
-});
+    // BACK-TO-TOP
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
-// Responsive Menu Toggle cho di động
-const navMenu = document.querySelector('.nav-menu');
-const navToggle = document.createElement('div');
-navToggle.classList.add('nav-toggle');
-navToggle.innerHTML = '☰';
-navToggle.style.display = 'none';
-document.querySelector('.nav-container').appendChild(navToggle);
+    // HIỆU ỨNG ĐẾM GIÁ
+    const prices = document.querySelectorAll('.pricing-price');
+    const pricingSection = document.querySelector('#pricing');
+    const priceObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            prices.forEach(price => {
+                const target = parseInt(price.textContent.replace(/[^0-9]/g, '')) || 0;
+                let current = 0;
+                const increment = target / 200;
+                const counter = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(counter);
+                    }
+                    price.textContent = `${Math.round(current).toLocaleString('vi-VN')} VNĐ`;
+                    price.style.transition = 'transform 0.5s ease';
+                    price.style.transform = 'scale(1.2)';
+                    setTimeout(() => price.style.transform = 'scale(1)', 500);
+                }, 15);
+            });
+            priceObserver.disconnect();
+        }
+    }, { threshold: 0.5 });
+    priceObserver.observe(pricingSection);
 
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-if (window.innerWidth <= 768) {
-    navToggle.style.display = 'block';
-    navToggle.style.fontSize = '30px';
-    navToggle.style.color = '#c2185b'; /* Đỏ cherry thay vàng */
-    navToggle.style.cursor = 'pointer';
-}
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth <= 768) {
-        navToggle.style.display = 'block';
-    } else {
-        navToggle.style.display = 'none';
-        navMenu.classList.remove('active');
+    // HIỆU ỨNG HOVER HÌNH ẢNH THÀNH VIÊN
+    const memberImgs = document.querySelectorAll('.member-img');
+    if (memberImgs.length > 0) {
+        memberImgs.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.2) rotate(5deg)';
+                img.style.transition = 'transform 0.6s ease';
+                img.style.boxShadow = '0 0 40px rgba(0, 113, 227, 0.6)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1) rotate(0)';
+                img.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.1)';
+            });
+        });
     }
 });
