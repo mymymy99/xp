@@ -1,304 +1,303 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <!-- Thiết lập ký tự và meta dữ liệu cho SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daryl Groups - Giải pháp thiết kế website chuyên nghiệp, trẻ trung và hiện đại">
-    <meta name="keywords" content="thiết kế website, web doanh nghiệp, e-commerce, landing page">
-    <title>Daryl Groups - Thiết Kế Website Trẻ Trung & Chuyên Nghiệp</title>
+    <meta name="description" content="Daryl GROUPS - Thiết kế website giá rẻ, chuyên nghiệp, hiện đại">
+    <meta name="keywords" content="thiết kế web, giá rẻ, chuyên nghiệp, Daryl GROUPS">
+    <meta name="author" content="Daryl GROUPS">
+    <!-- Tiêu đề trang -->
+    <title>Daryl GROUPS - Thiết Kế Web Hiện Đại & Sang Trọng</title>
+    <!-- Liên kết file CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font chữ từ CDN -->
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <!-- Icon của trang -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <head>
+        <!-- Các thẻ meta khác giữ nguyên -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Daryl GROUPS - Thiết kế website giá rẻ, chuyên nghiệp, hiện đại">
+        <meta name="keywords" content="thiết kế web, giá rẻ, chuyên nghiệp, Daryl GROUPS">
+        <meta name="author" content="Daryl GROUPS">
+        <title>Daryl GROUPS - Thiết Kế Web Hiện Đại & Sang Trọng</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+        <!-- Thay favicon.ico bằng tiger.png -->
+        <link rel="icon" href="images/tiger.png" type="image/png">
+    </head>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo-wrapper">
-                <span class="logo-text">Daryl Groups</span>
-                <span class="logo-tagline">Sáng tạo không giới hạn</span>
+    <!-- HEADER: Thanh điều hướng chính cố định -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo và tên thương hiệu -->
+            <div class="logo-section">
+                <img src="images/tiger.png" alt="Logo Daryl GROUPS" class="logo-img">
+                <h1 class="logo-title">Daryl GROUPS</h1>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Trang Chủ</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Dịch Vụ</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Dự Án</a></li>
-                <li class="nav-item"><a href="#team" class="nav-link">Đội Ngũ</a></li>
-                <li class="nav-item"><a href="#pricing" class="nav-link">Bảng Giá</a></li>
-                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Liên Hệ</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="#contact" class="cta-small">Get Started</a>
+        </div>
+    </header>
             </div>
-        </nav>
+            <!-- Nút toggle menu cho mobile -->
+            <button class="nav-toggle">☰</button>
+            <!-- Menu điều hướng -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Trang Chủ</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Dịch Vụ</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Dự Án</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">Bảng Giá</a></li>
+                    <li class="nav-item"><a href="#team" class="nav-link">Đội Ngũ</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <!-- Nút CTA ở header -->
+            <div class="header-cta">
+                <a href="#contact" class="cta-btn header-btn">Liên Hệ Ngay</a>
+            </div>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div id="particles-js"></div>
+    <!-- HERO SECTION: Phần giới thiệu chính -->
+    <section id="home" class="hero-section">
+        <!-- Lớp phủ parallax -->
         <div class="hero-overlay"></div>
+        <!-- Nội dung giới thiệu -->
         <div class="hero-content">
-            <h1 class="hero-title">Thiết Kế Website Đẳng Cấp</h1>
-            <p class="hero-subtitle">Biến ý tưởng của bạn thành hiện thực với giao diện trẻ trung, hiện đại</p>
+            <h2 class="hero-title">Thiết Kế Website Đẳng Cấp</h2>
+            <p class="hero-subtitle">Tăng trưởng doanh nghiệp của bạn với giải pháp web hiện đại, giá rẻ, và chuyên nghiệp.</p>
+            <!-- Các nút CTA -->
             <div class="hero-buttons">
-                <a href="#services" class="cta-button primary">Khám Phá Dịch Vụ</a>
-                <a href="#contact" class="cta-button secondary">Liên Hệ Ngay</a>
+                <a href="#services" class="cta-btn primary-btn">Khám Phá Dịch Vụ</a>
+                <a href="#portfolio" class="cta-btn secondary-btn">Xem Dự Án</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Dự Án Hoàn Thành</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Khách Hàng Hài Lòng</span>
-                </div>
-            </div>
+        </div>
+        <!-- Hình ảnh minh họa -->
+        <div class="hero-image-container">
+            <img src="https://picsum.photos/700/500?random=2" alt="Website mẫu nổi bật" class="hero-img">
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2 class="section-title">Tại Sao Chọn Daryl Groups?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="feature-icon">🚀</span>
-                <h3 class="feature-title">Tốc Độ Cao</h3>
-                <p class="feature-desc">Website load nhanh, tối ưu trải nghiệm người dùng.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🎨</span>
-                <h3 class="feature-title">Thiết Kế Đẹp</h3>
-                <p class="feature-desc">Giao diện sáng tạo, phù hợp mọi ngành nghề.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">📱</span>
-                <h3 class="feature-title">Responsive</h3>
-                <p class="feature-desc">Hiển thị hoàn hảo trên mọi thiết bị.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔒</span>
-                <h3 class="feature-title">Bảo Mật</h3>
-                <p class="feature-desc">Công nghệ bảo mật tiên tiến nhất.</p>
-            </div>
+    <!-- SERVICES SECTION: Dịch vụ -->
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <!-- Gradient cho 4 chữ "Dịch Vụ Thiết Kế" -->
+            <h2 class="section-title"><span class="highlight-text">Dịch Vụ Thiết Kế</span> Web</h2>
+            <p class="section-desc">Chúng tôi mang đến những giải pháp tối ưu cho mọi nhu cầu của bạn.</p>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2 class="section-title">Dịch Vụ Thiết Kế Website</h2>
-        <p class="section-subtitle">Giải pháp toàn diện cho mọi nhu cầu của bạn</p>
         <div class="services-grid">
             <article class="service-card">
-                <div class="service-icon"></div>
-                <h3 class="service-title">Website Doanh Nghiệp</h3>
-                <p class="service-desc">Giao diện chuyên nghiệp, tối ưu SEO và responsive.</p>
-                <a href="#" class="service-link">Xem Chi Tiết</a>
+                <img src="https://picsum.photos/300/200?random=3" alt="Thiết kế web" class="service-img">
+                <h3 class="service-title">Thiết Kế Web Đẹp</h3>
+                <p class="service-text">Giao diện độc đáo, responsive, tối ưu trải nghiệm người dùng.</p>
+                <a href="#contact" class="service-link">Tìm Hiểu Thêm</a>
             </article>
             <article class="service-card">
-                <div class="service-icon"></div>
-                <h3 class="service-title">E-Commerce</h3>
-                <p class="service-desc">Cửa hàng online hiện đại, tích hợp thanh toán.</p>
-                <a href="#" class="service-link">Xem Chi Tiết</a>
+                <img src="https://picsum.photos/300/200?random=4" alt="Tối ưu SEO" class="service-img">
+                <h3 class="service-title">Tối Ưu SEO</h3>
+                <p class="service-text">Đưa website lên top Google với chiến lược SEO hiệu quả.</p>
+                <a href="#contact" class="service-link">Tìm Hiểu Thêm</a>
             </article>
             <article class="service-card">
-                <div class="service-icon"></div>
-                <h3 class="service-title">Landing Page</h3>
-                <p class="service-desc">Trang đích tối ưu chuyển đổi cho chiến dịch quảng cáo.</p>
-                <a href="#" class="service-link">Xem Chi Tiết</a>
+                <img src="https://picsum.photos/300/200?random=5" alt="Bảo trì web" class="service-img">
+                <h3 class="service-title">Bảo Trì & Nâng Cấp</h3>
+                <p class="service-text">Hỗ trợ liên tục, đảm bảo website luôn hoạt động mượt mà.</p>
+                <a href="#contact" class="service-link">Tìm Hiểu Thêm</a>
+            </article>
+            <article class="service-card">
+                <img src="https://picsum.photos/300/200?random=6" alt="Web thương mại" class="service-img">
+                <h3 class="service-title">Web Thương Mại</h3>
+                <p class="service-text">Giải pháp bán hàng online chuyên nghiệp, dễ sử dụng.</p>
+                <a href="#contact" class="service-link">Tìm Hiểu Thêm</a>
             </article>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2 class="section-title">Dự Án Tiêu Biểu</h2>
-        <p class="section-subtitle">Những sản phẩm chúng tôi tự hào</p>
-        <div class="projects-grid">
-            <figure class="project-card">
-                <div class="project-placeholder"></div>
-                <figcaption class="project-info">
-                    <h3 class="project-title">Website Công Ty</h3>
-                    <p class="project-desc">Thiết kế tối giản, tốc độ cao.</p>
-                    <span class="project-tag">Doanh Nghiệp</span>
-                </figcaption>
-            </figure>
-            <figure class="project-card">
-                <div class="project-placeholder"></div>
-                <figcaption class="project-info">
-                    <h3 class="project-title">Shop Online</h3>
-                    <p class="project-desc">Giao diện thân thiện, dễ sử dụng.</p>
-                    <span class="project-tag">E-Commerce</span>
-                </figcaption>
-            </figure>
-            <figure class="project-card">
-                <div class="project-placeholder"></div>
-                <figcaption class="project-info">
-                    <h3 class="project-title">Landing Page Sự Kiện</h3>
-                    <p class="project-desc">Tăng 200% chuyển đổi quảng cáo.</p>
-                    <span class="project-tag">Landing Page</span>
-                </figcaption>
-            </figure>
+    <!-- PORTFOLIO SECTION: Dự án -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header">
+            <h2 class="section-title">Dự Án Nổi Bật</h2>
+            <p class="section-desc">Khám phá các dự án tiêu biểu mà chúng tôi đã thực hiện.</p>
         </div>
-        <a href="#" class="more-projects">Xem Tất Cả Dự Án</a>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2 class="section-title">Khách Hàng Nói Gì?</h2>
-        <div class="testimonials-grid">
-            <blockquote class="testimonial-card">
-                <p class="testimonial-text">"Daryl Groups đã biến ý tưởng của tôi thành một website tuyệt vời!"</p>
-                <cite class="testimonial-author">Nguyễn Văn A - CEO Công Ty XYZ</cite>
-            </blockquote>
-            <blockquote class="testimonial-card">
-                <p class="testimonial-text">"Dịch vụ nhanh chóng, giao diện đẹp, rất hài lòng!"</p>
-                <cite class="testimonial-author">Trần Thị B - Chủ Shop Online</cite>
-            </blockquote>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team" id="team">
-        <h2 class="section-title">Đội Ngũ Của Chúng Tôi</h2>
-        <p class="section-subtitle">Những người đứng sau thành công của bạn</p>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-avatar"></div>
-                <h3 class="member-name">Lê Minh C</h3>
-                <p class="member-role">Thiết Kế UI/UX</p>
-                <p class="member-bio">Chuyên gia giao diện với 5 năm kinh nghiệm.</p>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=7" alt="Dự án 1" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">Website Bán Hàng</h3>
+                    <p class="portfolio-desc">Giao diện hiện đại, tốc độ tải nhanh.</p>
+                </div>
             </div>
-            <div class="team-member">
-                <div class="member-avatar"></div>
-                <h3 class="member-name">Phạm Thị D</h3>
-                <p class="member-role">Lập Trình Viên</p>
-                <p class="member-bio">Chuyên phát triển web responsive.</p>
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=8" alt="Dự án 2" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">Blog Cá Nhân</h3>
+                    <p class="portfolio-desc">Thiết kế sáng tạo, tối ưu SEO.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=9" alt="Dự án 3" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">Doanh Nghiệp</h3>
+                    <p class="portfolio-desc">Trang web chuyên nghiệp, sang trọng.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/400/300?random=10" alt="Dự án 4" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">Portfolio Nghệ Thuật</h3>
+                    <p class="portfolio-desc">Phong cách độc đáo, nổi bật cá tính.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <h2 class="section-title">Gói Dịch Vụ</h2>
-        <p class="section-subtitle">Chọn gói phù hợp với nhu cầu của bạn</p>
-        <div class="pricing-grid">
+    <!-- PRICING SECTION: Bảng giá -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-header">
+            <h2 class="section-title"><span class="highlight-text">Bảng Giá </span>Thiết Kế</h2>
+            <p class="section-desc">Chọn gói phù hợp với nhu cầu và ngân sách của bạn.</p>
+        </div>
+        <div class="pricing-plans">
             <div class="pricing-card">
-                <h3 class="pricing-title">Cơ Bản</h3>
-                <p class="pricing-price">5.000.000 VNĐ</p>
+                <h3 class="pricing-title">Gói Cơ Bản</h3>
+                <p class="pricing-price">1.000.000 VNĐ</p>
                 <ul class="pricing-features">
-                    <li>Website 5 trang</li>
-                    <li>Tối ưu SEO cơ bản</li>
-                    <li>Responsive</li>
+                    <li class="feature-item">1 Trang Landing Page</li>
+                    <li class="feature-item">Thiết kế Responsive</li>
+                    <li class="feature-item">Tối ưu tốc độ tải</li>
+                    <li class="feature-item">Hỗ trợ theo nhu cầu</li>
                 </ul>
-                <a href="#contact" class="pricing-button">Chọn Gói</a>
+                <a href="#contact" class="cta-btn pricing-btn">Chọn Gói</a>
             </div>
             <div class="pricing-card featured">
-                <h3 class="pricing-title">Nâng Cao</h3>
-                <p class="pricing-price">10.000.000 VNĐ</p>
+                <h3 class="pricing-title">Gói Chuyên Nghiệp</h3>
+                <p class="pricing-price">3.000.000 VNĐ</p>
                 <ul class="pricing-features">
-                    <li>Website không giới hạn trang</li>
-                    <li>Tối ưu SEO chuyên sâu</li>
-                    <li>Responsive + Tích hợp thanh toán</li>
+                    <li class="feature-item">5 Trang Chính</li>
+                    <li class="feature-item">Tối ưu SEO cơ bản</li>
+                    <li class="feature-item">Tích hợp công cụ quản lý</li>
+                    <li class="feature-item">Hỗ trợ theo nhu cầu</li>
                 </ul>
-                <a href="#contact" class="pricing-button">Chọn Gói</a>
+                <a href="#contact" class="cta-btn pricing-btn">Chọn Gói</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="pricing-title">Gói Cao Cấp</h3>
+                <p class="pricing-price">5.000.000 VNĐ</p>
+                <ul class="pricing-features">
+                    <li class="feature-item">Thiết kế tùy chỉnh</li>
+                    <li class="feature-item">SEO nâng cao</li>
+                    <li class="feature-item">Tích hợp thương mại điện tử</li>
+                    <li class="feature-item">Hỗ trợ theo nhu cầu</li>
+                </ul>
+                <a href="#contact" class="cta-btn pricing-btn">Chọn Gói</a>
             </div>
         </div>
     </section>
 
-    <!-- Blog Preview Section -->
-    <section class="blog" id="blog">
-        <h2 class="section-title">Tin Tức & Mẹo Thiết Kế</h2>
-        <div class="blog-grid">
-            <article class="blog-post">
-                <div class="blog-placeholder"></div>
-                <h3 class="blog-title">5 Xu Hướng Thiết Kế Web 2025</h3>
-                <p class="blog-excerpt">Khám phá xu hướng mới nhất để dẫn đầu thị trường.</p>
-                <a href="#" class="blog-link">Đọc Thêm</a>
-            </article>
-            <article class="blog-post">
-                <div class="blog-placeholder"></div>
-                <h3 class="blog-title">Tối Ưu SEO Như Thế Nào?</h3>
-                <p class="blog-excerpt">Bí quyết đưa website lên top Google.</p>
-                <a href="#" class="blog-link">Đọc Thêm</a>
-            </article>
+    <!-- TEAM SECTION: Đội ngũ -->
+    <section id="team" class="team-section">
+        <div class="section-header">
+            <h2 class="section-title">Đội Ngũ Chuyên Gia</h2>
+            <p class="section-desc">Gặp gỡ những người đứng sau thành công của Daryl GROUPS.</p>
+        </div>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="images/nguyen-van-a.jpg" alt="thanh tuấn" class="member-img">    
+                            <h3 class="member-name">Thanh Tuấn</h3>
+                <p class="member-role">Nhà thiết kế UI/UX</p>
+                <p class="member-bio">Chuyên gia sáng tạo & ăn trộm giao diện đẹp mắt.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/tranthib.jpg" alt="Ngọc Mỹ" class="member-img">     
+                           <h3 class="member-name">Ngọc Mỹ</h3>
+                <p class="member-role">Lập trình viên Front-end</p>
+                <p class="member-bio">Tối ưu trải nghiệm người dùng.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/Daryl.jpg" alt="Nguyễn Văn A" class="member-img">  
+                              <h3 class="member-name">Boss Daryl</h3>
+                <p class="member-role">Chuyên gia SEO</p>
+                <p class="member-bio">Đưa website lên top tìm kiếm.</p>
+            </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-        <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary class="faq-question">Thời gian thiết kế website là bao lâu?</summary>
-                <p class="faq-answer">Thông thường từ 7-14 ngày tùy dự án.</p>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Tôi có thể chỉnh sửa website sau khi hoàn thành không?</summary>
-                <p class="faq-answer">Có, chúng tôi cung cấp hướng dẫn hoặc dịch vụ hỗ trợ.</p>
-            </details>
+    <!--T SECTION: Liên hệ -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
+            <p class="section-desc">Hãy để chúng tôi giúp bạn xây dựng website mơ ước!</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
-        <p class="section-subtitle">Hãy để chúng tôi giúp bạn tỏa sáng trên internet!</p>
-        <div class="contact-wrapper">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Họ và Tên</label>
-                    <input type="text" id="name" class="form-input" placeholder="Nhập tên của bạn" required>
+        <div class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/meoaqpev" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Họ và Tên</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Họ và tên của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Email của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Số Điện Thoại</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="Số điện thoại của bạn" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message" class="form-label">Tin Nhắn</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Yêu cầu hoặc tin nhắn của bạn" rows="5" required></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-input" placeholder="Nhập email của bạn" required>
-                </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Tin Nhắn</label>
-                    <textarea id="message" class="form-textarea" placeholder="Yêu cầu của bạn" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Gửi Yêu Cầu</button>
+                <button type="submit" class="cta-btn submit-btn">Gửi Liên Hệ</button>
             </form>
-            <div class="contact-info">
-                <p class="info-item"><strong>Email:</strong> huynhgiangocmy@gmail.com</p>
-                <p class="info-item"><strong>Phone:</strong> 0899499998</p>
+        
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="footer-logo">Daryl Groups</h3>
-                <p class="footer-desc">Thiết kế website trẻ trung, sáng tạo, chuyên nghiệp.</p>
+    <!-- FOOTER: Chân trang -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3 class="footer-title">Daryl GROUPS</h3>
+                <p class="footer-text">Chuyên cung cấp giải pháp thiết kế web giá rẻ, hiện đại, và sang trọng.</p>
             </div>
-            <div class="footer-section">
-                <h4 class="footer-title">Liên Kết</h4>
-                <ul class="footer-links">
-                    <li><a href="#home">Trang Chủ</a></li>
-                    <li><a href="#services">Dịch Vụ</a></li>
-                    <li><a href="#projects">Dự Án</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
+            <div class="footer-links">
+                <h3 class="footer-title">Liên Kết Nhanh</h3>
+                <ul class="footer-list">
+                    <li><a href="#home" class="footer-link">Trang Chủ</a></li>
+                    <li><a href="#services" class="footer-link">Dịch Vụ</a></li>
+                    <li><a href="#portfolio" class="footer-link">Dự Án</a></li>
+                    <li><a href="#contact" class="footer-link">Liên Hệ</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4 class="footer-title">Theo Dõi Chúng Tôi</h4>
-                <div class="social-links">
-                    <a href="#" class="social-icon">FB</a>
-                    <a href="#" class="social-icon">IG</a>
-                    <a href="#" class="social-icon">TW</a>
-                </div>
+            <div class="footer-social">
+                <h3 class="footer-title">Theo Dõi Chúng Tôi</h3>
+                <a href="https://www.facebook.com/share/15hz6UZbqn/" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
             </div>
         </div>
-        <p class="footer-text">© 2025 Daryl Groups. All rights reserved.</p>
+        <p class="footer-copyright">© 2025 Daryl GROUPS. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Nút quay lại đầu trang -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Liên kết file JavaScript -->
     <script src="script.js"></script>
-</body>
+</body><div class="contact-icons">
+    <a href="https://facebook.com" target="_blank">
+      <img src="images/facebook.png" alt="Facebook">
+    </a>
+    <a href="tel:123456789">
+      <img src="images/phone.png" alt="Phone">
+    </a>
+    <a href="https://zalo.me/0899499998" target="_blank">
+      <img src="images/zalo.png" alt="Zalo">
+    </a>
+  </div>
 </html>
