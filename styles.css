@@ -1041,7 +1041,4 @@ body {
   .contact-icons img {
     width: 40px;
     height: 40px;
-  }.header-cta {
-    margin-left: 25px;
-    margin-top: 50px; /* Thêm dòng này để đẩy xuống 2cm */
-}
+  }
